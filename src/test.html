@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DockerLocal</title>
+
+</head>
+
+<body>
+  <button onClick={fetchRepos()}>GET USER REPOS</button>
+</body>
+<script>
+  // const MAIN_WINDOW_WEBPACK_ENTRY;
+  function fetchRepos(){
+    fetch('http://localhost:3001/api/repos')
+    .then(res=>res.json())
+    .then(data => console.log(data))
+    // .then(() => window.location.replace(MAIN_WINDOW_WEBPACK_ENTRY))
+    .catch(err=>console.log(err))
+
+
+  }
+</script>
+</html>

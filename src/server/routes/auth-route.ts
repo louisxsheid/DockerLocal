@@ -23,7 +23,7 @@ router.get(
     failureRedirect: '/fail'
   }),
   authController.saveAccessToken,
-  (req: Request, res: Response) => res.redirect('/api/repos')
+  (req: Request, res: Response) => res.redirect('/test')
 );
 
 module.exports = router;
