@@ -27,8 +27,8 @@ gitController.cloneRepo = async (
     const promises = repos.map(async (currentRepo) => {
       const repoOwner = currentRepo.repoOwner;
       const repoName = currentRepo.repoName;
-
-      const bat = await spawn('cmd.exe', ['/c',`cd ${path.join(homePath, "\\src\\scripts\\windows")}`, `cloneRepo.bat ${repoOwner} ${repoName} ${projectName}`]);
+//`cd ${path.join(homePath, "\\src\\scripts\\windows")}`
+      const bat = await spawn('cmd.exe', ['/c', `cloneRepo.bat ${repoOwner} ${repoName} ${projectName}`]);
 
       bat.stdout.on('data', (data) => {
         console.log('successful cloning')
