@@ -24,10 +24,10 @@ router.get(
 router.post(
   "/clonerepos",
   authController.saveUserInfoAndRepos,
-  sshKeyController.createSSHkey,
-  sshKeyController.addSSHkeyToGithub,
+  // sshKeyController.createSSHkey,
+  // sshKeyController.addSSHkeyToGithub,
   gitController.cloneRepo,
-  sshKeyController.deleteSSHkey,
+  // sshKeyController.deleteSSHkey,
   (req: Request, res: Response) => res.status(201).json(res.locals.repos)
 );
 
